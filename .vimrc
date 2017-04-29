@@ -104,6 +104,8 @@ Plugin 'Valloric/YouCompleteMe'
 
 Plugin 'tyrannicaltoucan/vim-deep-space'
 
+Plugin 'ryanoasis/vim-devicons'
+
 " ============================================================================
 " Install plugins the first time vim runs
 
@@ -460,4 +462,5 @@ autocmd BufNewFile * normal G
 
 
 
-
+set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
+let g:airline_powerline_fonts = 1
