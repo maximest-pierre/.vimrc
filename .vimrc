@@ -38,7 +38,6 @@ Plugin 'mattn/emmet-vim'
 Plugin 'tpope/vim-fugitive'
 " Tab list panel
 Plugin 'kien/tabman.vim'
-" Airline
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 " Consoles as buffers
@@ -85,6 +84,12 @@ Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'tao12345666333/vim-vue'
 " True Sublime Text style multiple selections for Vim
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'pangloss/vim-javascript'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'othree/yajs'
+Plugin 'mxw/vim-jsx'
+
+Plugin 'w0rp/ale'
 
 " Plugins from vim-scripts repos:
 
@@ -344,6 +349,10 @@ let g:syntastic_warning_symbol = '⚠'
 let g:syntastic_style_error_symbol = '✗'
 let g:syntastic_style_warning_symbol = '⚠'
 
+let g:ale_sign_error = '●' " Less aggressive than the default '>>'
+let g:ale_sign_warning = '.'
+let g:ale_lint_on_enter = 0 " Less distracting when opening a new file
+
 " Python-mode ------------------------------
 
 " don't use linter, we use syntastic for that
@@ -413,7 +422,6 @@ colorscheme deep-space
 " Airline ------------------------------
 
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'deep-space'
 "let g:airline#extensions#tabline#enabled = 1
 "let g:airline#extensions#tabline#left_sep = ' '
 "let g:airline#extensions#tabline#left_alt_sep = '|'
@@ -440,6 +448,7 @@ let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 
+
 " new file set title and turn to endline
 autocmd BufNewFile *.sh,*.py,*.rb exec ":call SetTitle()"
 function SetTitle()
@@ -462,5 +471,3 @@ autocmd BufNewFile * normal G
 
 
 
-set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ 11
-let g:airline_powerline_fonts = 1
