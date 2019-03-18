@@ -223,18 +223,8 @@ nmap ,r :RecurGrepFast
 nmap ,wR :RecurGrep <cword><CR>
 nmap ,wr :RecurGrepFast <cword><CR>
 
-" use 256 colors when possible
-if &term =~? 'mlterm\|xterm\|xterm-256\|screen-256'
-	let &t_Co = 256
-    colorscheme molokai
-else
-    colorscheme delek
-endif
 
-" colors for gvim
-if has('gui_running')
-    colorscheme wombat
-endif
+colorscheme molokai
 
 " when scrolling, keep cursor 3 lines away from screen border
 set scrolloff=3
@@ -414,10 +404,6 @@ nmap  -  <Plug>(choosewin)
 " show big letters
 let g:choosewin_overlay_enable = 1
 
-" Override theme
-set background=dark
-set termguicolors
-colorscheme deep-space
 
 " Airline ------------------------------
 
@@ -447,7 +433,7 @@ let g:airline_right_alt_sep = ''
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
-
+let g:airline_theme='angr'
 
 " new file set title and turn to endline
 autocmd BufNewFile *.sh,*.py,*.rb exec ":call SetTitle()"
